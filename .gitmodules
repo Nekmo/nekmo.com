@@ -1,0 +1,6 @@
+[submodule "nektheme"]
+	path = nektheme
+	url = git@github.com:nekmocom/django-cms-explorer.git
+[submodule "nekmocom/secrets"]
+	path = nekmocom/secrets
+	url = git@bitbucket.org:Nekmo/nekmocom-secrets.git
