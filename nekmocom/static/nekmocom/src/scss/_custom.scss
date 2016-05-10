@@ -1,0 +1,19 @@
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300);
+//
+//$font-family-sans-serif:  "Roboto", Helvetica, Arial, sans-serif;
+$font-family-serif:       "Roboto Slab", Georgia, "Times New Roman", Times, serif;
+////** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+//$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+//$font-family-base:        $font-family-sans-serif;
+$font-family-monospace:   Consolas, "Courier New", monospace;
+
+$navbar-default-bg: $blue-grey-600;
+$navbar-default-brand-color: white;
+$navbar-default-link-color: white;
+$navbar-default-link-hover-color: #dde2ff;
+$navbar-default-link-active-color: white;
+
+$gray-light: #e5e5e5;
+$navbar-margin-bottom: 0;

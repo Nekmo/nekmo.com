@@ -1,0 +1,57 @@
+
+
+html {
+    &.fluid-fixed-top-default, &.fluid-fixed-top, &.fluid-fixed-top-inverse {
+        body {
+            margin-top: 70px;
+
+        }
+        &.cms-toolbar-expanded [role=navigation] {
+            margin-top: 45px;
+        }
+    }
+}
+
+@for $i from 1 to 20 {
+    $buffer: $i * 5;
+    .top-buffer-#{$buffer} {
+        margin-top: #{$buffer}px;
+    }
+
+    .bottom-buffer-#{$buffer}{
+        margin-bottom: #{$buffer}px;
+    }
+}
+
+/* Extra modifications */
+@import "common";
+
+.font-size-150 {
+    font-size: 150%;
+}
+.font-size-200 {
+    font-size: 200%;
+}
+.font-size-300 {
+    font-size: 300%;
+}
+.font-size-400 {
+    font-size: 400%;
+}
+
+.code-block {
+    border: 0;
+    position: relative;
+    color: #b3e115;
+    font-family: Consolas,"Liberation Mono",Courier,monospace;
+    line-height: 1.2;
+    background: #35363C none repeat scroll 0 0;
+    padding: 14px;
+
+    code, pre {
+        font-size: 12px;
+        color: #b3e115;
+        background: transparent;
+        border: 0;
+    }
+}

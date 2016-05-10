@@ -1,0 +1,32 @@
+// Colores de Boostrap para poder usar luego
+@import "../libs/bootstrap-material-design/sass/colors";
+
+$speed-base:    200ms;
+$brand-primary: #00B3FE;
+$grid-columns: 24;
+$header-background-color: $blue-grey-900;
+$mdi-font-path:        "../libs/mdi/fonts" !default;
+
+// Fonts
+$icon-font-path: "../libs/bootstrap-sass/assets/fonts/bootstrap/";
+$fa-font-path: "../libs/font-awesome/fonts/";
+@if compass-env() == 'production' {
+    $fa-font-path: "../../../cms_bs3_theme/dist/fonts/font-awesome";
+    $icon-font-path: "../../../cms_bs3_theme/dist/fonts/bootstrap";
+}
+@import "../libs/font-awesome/scss/font-awesome";
+@import "../libs/mdi/scss/materialdesignicons";
+
+/* Propio */
+@import "custom";
+@import "header";
+
+
+@import "../libs/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import "newsblog";
+
+/* Sections */
+.section-gray {
+    background: #e8e8e8;
+}

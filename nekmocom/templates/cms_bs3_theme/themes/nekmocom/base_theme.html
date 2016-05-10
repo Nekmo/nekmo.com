@@ -1,0 +1,48 @@
+{% extends "cms_bs3_theme/base.html" %}
+{% load static i18n cms_tags %}
+
+{% block header %}
+    <div id="header">
+        <div class="container">
+            <div id="headline">
+                <div id="name-slogan">
+                    <h1 id="name">Nekmo.com</h1>
+                    <p>
+                        <nobr>
+                            <span class="function">print(</span><!--
+                            --><span class="string">"{} {} y más."</span><!--
+                            --><span class="function">.format(</span>slogan, <!--
+                            --><span class="string">', '</span><!--
+                            --><span class="function">.join(</span><!--
+                            -->content<span class="function">)))</span>
+                        </nobr>
+                    </p>
+                    <p class="result">Una web personal sobre programación,
+                        software libre, videojuegos, series y más.</p>
+                </div>
+                <div id="logo"></div>
+            </div>
+            <div id="search" class="pull-right">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="{% trans 'Comenzar a buscar...' %}"
+                           aria-describedby="basic-addon1">
+                    <span class="input-group-addon" id="basic-addon1">@</span>
+                </div>
+            </div>
+            <div id="social">
+                {% block social %}
+                    {% static_placeholder "social" %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+    {% include bs3_conf.BOOTSTRAP3_MENU_TEMPLATE %}
+{% endblock %}
+
+{% block bs3_theme_css %}
+    {% if bs3_conf.BOOTSTRAP3_FORCE_SRC %}
+        <link rel="stylesheet" href="{% static 'nekmocom/src/css/nekmocom.css' %}">
+    {% else %}
+        <link rel="stylesheet" href="{% static 'nekmocom/dist/css/nekmocom.css' %}">
+    {% endif %}
+{% endblock %}
