@@ -311,7 +311,7 @@ CKEDITOR_SETTINGS = {
         ['Source']
     ],
     'extraPlugins': 'filerimage',
-    'removePlugins': 'image'
+    'removePlugins': 'image',
 }
 
 CMS_PLACEHOLDER_CONF = {

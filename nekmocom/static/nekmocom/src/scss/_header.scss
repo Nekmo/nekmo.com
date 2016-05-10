@@ -21,6 +21,7 @@
                 color: white;
                 font-size: 70px;
                 margin-top: 10px;
+                font-weight: 400;
             }
 
             p {
@@ -63,5 +64,18 @@
         position: absolute;
         bottom: 0;
         right: 0;
+        display: inline;
+
+        .mdi {
+            color: white;
+            font-size: 40px;
+            visibility: hidden;
+            width: 40px;
+            margin-left: 10px;
+        }
+
+        .mdi::before {
+            visibility: visible;
+        }
     }
 }

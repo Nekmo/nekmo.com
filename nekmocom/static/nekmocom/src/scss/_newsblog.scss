@@ -304,11 +304,11 @@
         padding-left: $line-height-computed;
         padding-right: $line-height-computed / 2;
         width: 75px;
-        &:before {
-            @extend .fa;
-            @extend .fa-search;
-            padding-right: 50px;
-        }
+        //&:before {
+        //    @extend .fa;
+        //    @extend .fa-search;
+        //    padding-right: 50px;
+        //}
     }
 }
 

@@ -1,5 +1,6 @@
 // Colores de Boostrap para poder usar luego
 @import "../libs/bootstrap-material-design/sass/colors";
+@import "../libs/bootstrap-sass/assets/stylesheets/bootstrap/variables";
 
 $speed-base:    200ms;
 $brand-primary: #00B3FE;
@@ -8,21 +9,37 @@ $header-background-color: $blue-grey-900;
 $mdi-font-path:        "../libs/mdi/fonts" !default;
 
 // Fonts
-$icon-font-path: "../libs/bootstrap-sass/assets/fonts/bootstrap/";
-$fa-font-path: "../libs/font-awesome/fonts/";
-@if compass-env() == 'production' {
-    $fa-font-path: "../../../cms_bs3_theme/dist/fonts/font-awesome";
-    $icon-font-path: "../../../cms_bs3_theme/dist/fonts/bootstrap";
-}
-@import "../libs/font-awesome/scss/font-awesome";
+//$icon-font-path: "../libs/bootstrap-sass/assets/fonts/bootstrap/";
+//$fa-font-path: "../libs/font-awesome/fonts/";
+//@if compass-env() == 'production' {
+//    $fa-font-path: "../../../cms_bs3_theme/dist/fonts/font-awesome";
+//    $icon-font-path: "../../../cms_bs3_theme/dist/fonts/bootstrap";
+//}
+//@import "../libs/font-awesome/scss/font-awesome";
+
 @import "../libs/mdi/scss/materialdesignicons";
+@import "../libs/devicon/devicon.css";
+
 
 /* Propio */
 @import "custom";
 @import "header";
+@import "footer";
+@import "home";
 
 
 @import "../libs/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.mdi {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 @import "newsblog";
 

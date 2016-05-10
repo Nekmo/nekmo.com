@@ -26,7 +26,9 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="{% trans 'Comenzar a buscar...' %}"
                            aria-describedby="basic-addon1">
-                    <span class="input-group-addon" id="basic-addon1">@</span>
+                    <span class="input-group-addon" id="basic-addon1">
+                        <span class="mdi mdi-magnify"></span>
+                    </span>
                 </div>
             </div>
             <div id="social">
@@ -38,6 +40,22 @@
     </div>
     {% include bs3_conf.BOOTSTRAP3_MENU_TEMPLATE %}
 {% endblock %}
+
+{% block footer %}
+    <div class="footer">
+        <div class="container">
+            <div class="col-md-12">
+                <h3>Nekmo Software 2016 <small>Todos los derechos reservados.</small></h3>
+                Los errores y sugerencias de los proyectos de esta web deben ser notificados en su respectiva página
+                de reportes. Las dudas no se responderán por email. Para informar de vulnerabilidades de seguridad,
+                escriba a <a href="mailto:security@nekmo.com">security@nekmo.com</a>.
+            </div>
+            <div class="col-md-12">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
 
 {% block bs3_theme_css %}
     {% if bs3_conf.BOOTSTRAP3_FORCE_SRC %}
