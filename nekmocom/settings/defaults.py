@@ -119,7 +119,6 @@ STATICFILES_FINDERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'django_tools.dynamic_site.middleware.DynamicSiteMiddleware',
     'cms.middleware.utils.ApphookReloadMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     # 'django.contrib.sites.middleware.CurrentSiteMiddleware',
@@ -193,9 +192,6 @@ INSTALLED_APPS = (
     'aldryn_bootstrap3',
 
     'djangocms_comments',
-
-    'django_tools',
-    'django_tools.dynamic_site',
 
     # 'nektheme',
 )

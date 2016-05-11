@@ -1,0 +1,2 @@
+SITE_ID = 2
+BOOTSTRAP3_THEME = 'nekmonet'

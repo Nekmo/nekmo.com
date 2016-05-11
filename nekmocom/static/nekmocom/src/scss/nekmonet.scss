@@ -11,9 +11,9 @@ $header-background-color: $blue-grey-900;
 // custom debe encontrarse antes que boostrap para poder establecer variables
 // Bootstrap debe estar después de custom pero antes que las partes para que puedan usar componentes
 @import "../libs/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "_nekmocom/header";
+@import "_nekmonet/header";
 @import "footer";
-@import "_nekmocom/home";
+@import "_nekmonet/home";
 
 @import "newsblog";
 

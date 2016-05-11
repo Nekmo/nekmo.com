@@ -1,15 +1,8 @@
 
 
-html {
-    &.fluid-fixed-top-default, &.fluid-fixed-top, &.fluid-fixed-top-inverse {
-        body {
-            margin-top: 70px;
-
-        }
-        &.cms-toolbar-expanded [role=navigation] {
-            margin-top: 45px;
-        }
-    }
+/* Sections */
+.section-gray {
+    background: #e8e8e8;
 }
 
 @for $i from 1 to 20 {
@@ -24,7 +17,6 @@ html {
 }
 
 /* Extra modifications */
-@import "common";
 
 .font-size-150 {
     font-size: 150%;
@@ -54,4 +46,28 @@ html {
         background: transparent;
         border: 0;
     }
+}
+
+/* Margen superior  cuando es fluid */
+html {
+    &.fluid-fixed-top-default, &.fluid-fixed-top, &.fluid-fixed-top-inverse {
+        body {
+            margin-top: 70px;
+
+        }
+        &.cms-toolbar-expanded [role=navigation] {
+            margin-top: 45px;
+        }
+    }
+}
+
+.mdi {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

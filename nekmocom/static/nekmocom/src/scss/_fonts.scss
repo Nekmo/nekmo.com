@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300);
+
+
+$mdi-font-path:        "../libs/mdi/fonts" !default;
+
+// Fonts
+//$icon-font-path: "../libs/bootstrap-sass/assets/fonts/bootstrap/";
+//$fa-font-path: "../libs/font-awesome/fonts/";
+//@if compass-env() == 'production' {
+//    $fa-font-path: "../../../cms_bs3_theme/dist/fonts/font-awesome";
+//    $icon-font-path: "../../../cms_bs3_theme/dist/fonts/bootstrap";
+//}
+//@import "../libs/font-awesome/scss/font-awesome";
+
+@import "../libs/mdi/scss/materialdesignicons";
+@import "../libs/devicon/devicon.css";

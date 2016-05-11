@@ -6,7 +6,5 @@ def common(request):
     #     theme = request.host.theme
     # except:
     #     theme = 'default'
-    print(repr(request.get_host()))
-    print(shortcuts.get_current_site(request))
     return {
     }
