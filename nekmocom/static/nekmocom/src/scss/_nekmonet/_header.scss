@@ -1,3 +1,66 @@
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes mobile_color_change {
+	from { background-color: #141414; }
+	to { background-color: #e3da8f; }
+}
+
+@keyframes tablet_color_change {
+	from { background-color: #141414; }
+	to { background-color: #9bc999; }
+}
+
+@keyframes pc_color_change {
+	from { background-color: #141414; }
+	to { background-color: #99c9ba; }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes progress_bar {
+    0% {
+        width: 15%;
+    }
+
+    30% {
+        width: 30%;
+    }
+
+    50% {
+        width: 60%;
+    }
+
+    60% {
+        width: 65%;
+    }
+
+    80% {
+        width: 95%
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes animated_background {
+    from {
+        background: red;
+    }
+    to {
+        background: red;
+    }
+}
+
 #header {
     background: #c8d8d7;
     overflow: hidden;
@@ -27,9 +90,121 @@
         font-size: 25px;
     }
 
-    .devices {
+    .devices-wrapper {
         width: 500px;
         height: 350px;
-        background: url('../img/devices.png');
+        position: relative;
     }
+
+    .devices {
+        position: absolute;
+        background: url('../img/devices.png');
+        z-index: 10;
+        width: 500px;
+        height: 350px;
+    }
+
+    .all-screens {
+        position: absolute;
+        width: 500px;
+        height: 350px;
+        animation: animated_background 3s;
+        animation-delay: 7.3s;
+    }
+
+    .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+    }
+
+    .pc-screen {
+        position: absolute;
+        top: 18px;
+        left: 127px;
+        bottom: 129px;
+        right: 75px;
+    }
+
+    .tablet-screen {
+        position: absolute;
+        top: 156px;
+        left: 57px;
+        right: 327px;
+        bottom: 35px;
+    }
+
+    .mobile-screen {
+        position: absolute;
+        top: 255px;
+        left: 167px;
+        right: 284px;
+        bottom: 15px;
+    }
+
+    .pc-bg {
+        background: #141414;
+        animation: pc_color_change 1.5s forwards;
+        animation-delay: 1.6s;
+    }
+
+    .tablet-bg {
+        background: #141414;
+        animation: tablet_color_change 1.5s forwards;
+        animation-delay: 1.3s;
+    }
+
+    .mobile-bg {
+        background: #141414;
+        animation: mobile_color_change 1.5s forwards;
+        animation-delay: 1s;
+    }
+
+    .pc-loading {
+        animation-delay: 1.8s;
+        .progress {
+            width: 80%;
+            .progress-bar {
+                width: 15%;
+                animation: progress_bar 5s forwards;
+                animation-delay: 2.5s;
+            }
+        }
+    }
+
+    .tablet-loading {
+        animation-delay: 1.8s;
+
+        span {
+            background: #c82860;
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            margin-left: 5px;
+            margin-right: 5px;
+
+            animation: fadeIn 1s alternate linear infinite;
+
+            &.dot-2 {
+                animation-delay: 0.3s;
+            }
+            &.dot-3 {
+                animation-delay: 0.6s;
+            }
+        }
+    }
+
+    .mobile-loading {
+        animation-delay: 1.5s;
+
+        span {
+            animation: spin 1s linear infinite;
+            font-size: 20px;
+            color: #11478a;
+        }
+    }
+
 }
