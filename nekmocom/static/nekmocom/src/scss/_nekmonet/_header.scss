@@ -18,6 +18,21 @@
 	to { background-color: #99c9ba; }
 }
 
+@keyframes mobile_color_change2 {
+	from { background-color: #f6f6f6; }
+	to { background-color: #e3da8f; }
+}
+
+@keyframes tablet_color_change2 {
+	from { background-color: #f6f6f6; }
+	to { background-color: #9bc999; }
+}
+
+@keyframes pc_color_change2 {
+	from { background-color: #f6f6f6; }
+	to { background-color: #99c9ba; }
+}
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -54,10 +69,12 @@
 
 @keyframes animated_background {
     from {
-        background: red;
+        background: url(../img/stars_background.jpg) repeat;
+        background-position: 0 0;
     }
     to {
-        background: red;
+        background: url(../img/stars_background.jpg) repeat;
+        background-position: -300px 600px;
     }
 }
 
@@ -108,7 +125,11 @@
         position: absolute;
         width: 500px;
         height: 350px;
-        animation: animated_background 3s;
+    }
+
+    .all-screens.starts-animation {
+        animation: animated_background 1.2s linear;
+        animation-iteration-count: 10;
         animation-delay: 7.3s;
     }
 
@@ -186,7 +207,8 @@
             margin-left: 5px;
             margin-right: 5px;
 
-            animation: fadeIn 1s alternate linear infinite;
+            animation: fadeIn 1s alternate linear;
+            animation-iteration-count: 10;
 
             &.dot-2 {
                 animation-delay: 0.3s;
@@ -201,10 +223,79 @@
         animation-delay: 1.5s;
 
         span {
-            animation: spin 1s linear infinite;
+            animation: spin 1s linear;
+            animation-iteration-count: 10;
             font-size: 20px;
             color: #11478a;
         }
     }
 
+    .white-screen {
+        background: #f6f6f6;
+        opacity: 0;
+        animation: fadeIn 0.1s forwards;
+        animation-delay: 9s;
+    }
+
+    .nekmi {
+        background: url(../img/logo.svg);
+        display: inline-block;
+        opacity: 0;
+        animation: fadeIn 1.5s forwards;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo.mobile-screen {
+        animation: mobile_color_change2 1s forwards;
+        animation-delay: 9.3s;
+
+        .nekmi {
+            width: 25px;
+            height: 25px;
+            background-size: 25px 25px;
+            animation-delay: 10.5s;
+        }
+    }
+
+    .logo.tablet-screen {
+        animation: tablet_color_change2 1s forwards;
+        animation-delay: 9.6s;
+
+        .nekmi {
+            width: 60px;
+            height: 60px;
+            background-size: 60px 60px;
+            animation-delay: 11s;
+        }
+    }
+
+    .logo.pc-screen {
+        animation: pc_color_change2 1s forwards;
+        animation-delay: 10s;
+
+        .nekmi {
+            width: 100px;
+            height: 100px;
+            background-size: 100px 100px;
+            animation-delay: 11.5s;
+            display: flex;
+            margin: auto;
+        }
+
+        .title {
+            opacity: 0;
+            text-transform: uppercase;
+            font-size: 22px;
+            font-weight: 600;
+            color: #f6f6f6;
+            animation: fadeIn 1.5s forwards;
+            animation-delay: 12s;
+            text-align: center;
+        }
+    }
 }
