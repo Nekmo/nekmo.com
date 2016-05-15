@@ -2,7 +2,7 @@ from .defaults import *
 
 SECRET_KEY = getattr(secrets, 'SECRET_KEY', SECRET_KEY)
 DATABASES = getattr(secrets, 'DATABASES', DATABASES)
-HOME = getattr(secrets, 'HOME', os.environ['HOME']).rstrip('/')
+HOME = getattr(secrets, 'HOME', os.environ.get('HOME', '')).rstrip('/')
 
 
 def expand_home(path):
