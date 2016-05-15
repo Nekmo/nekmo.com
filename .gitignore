@@ -16,6 +16,7 @@ env/
 build/
 develop-eggs/
 dist/
+/nekmocom/static/nekmocom/src/css
 downloads/
 eggs/
 .eggs/
