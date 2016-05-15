@@ -28,4 +28,17 @@ body {
     h3 {
         margin-top: 0;
     }
+
+    .tech {
+        margin-top: 20px;
+
+        a, a:hover {
+            color: #f7f7f7;
+            text-decoration: none;
+
+            span, i {
+                font-size: 40px;
+            }
+        }
+    }
 }
