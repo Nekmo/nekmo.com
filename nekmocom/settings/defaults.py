@@ -286,26 +286,27 @@ BOOTSTRAP3 = {
     'horizontal_field_class': 'col-md-18',
 }
 
-CKEDITOR_SETTINGS = {
-    'language': '',
-    'skin': 'moono',
-    'toolbar': 'HTMLField',
-    'toolbar_HTMLField': [
-        ['Undo', 'Redo'],
-        ['ShowBlocks'],
-        ['Format', 'Styles'],
-        ['TextColor', 'BGColor', '-', 'PasteText', 'PasteFromWord'],
-        ['Maximize', ''],
-        '/',
-        ['Bold', 'Italic', 'Underline', '-', 'Subscript', 'Superscript', '-', 'RemoveFormat'],
-        ['JustifyLeft', 'JustifyCenter', 'JustifyRight'],
-        ['Link', 'Unlink'],
-        ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Table', 'FilerImage'],
-        ['Source']
-    ],
-    'extraPlugins': 'filerimage',
-    'removePlugins': 'image',
-}
+# CKEDITOR_SETTINGS = {
+#     'language': '',
+#     'skin': 'moono',
+#     'toolbar': 'CMS',
+#     'toolbar_HTMLField': [
+#         ['Undo', 'Redo'],
+#         ['cmsplugins', '-', 'ShowBlocks'],
+#         ['Format', 'Styles'],
+#         ['TextColor', 'BGColor', '-', 'PasteText', 'PasteFromWord'],
+#         ['Maximize', ''],
+#         '/',
+#         ['Bold', 'Italic', 'Underline', '-', 'Subscript', 'Superscript', '-', 'RemoveFormat'],
+#         ['JustifyLeft', 'JustifyCenter', 'JustifyRight'],
+#         ['Link', 'Unlink'],
+#         ['HorizontalRule'],
+#         ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Table', 'FilerImage'],
+#         ['Source']
+#     ],
+#     'extraPlugins': 'filerimage',
+#     'removePlugins': 'image',
+# }
 
 CMS_PLACEHOLDER_CONF = {
     'post_content': {
