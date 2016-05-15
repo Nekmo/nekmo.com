@@ -2,7 +2,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300);
 
 
-$mdi-font-path:        "../libs/mdi/fonts" !default;
+$mdi-font-path: "../libs/mdi/fonts";
+
+@if compass-env() == 'production' {
+    $mdi-font-path: "../fonts/mdi";
+}
 
 // Fonts
 //$icon-font-path: "../libs/bootstrap-sass/assets/fonts/bootstrap/";
