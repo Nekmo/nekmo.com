@@ -2,11 +2,17 @@ from .defaults import *
 
 SECRET_KEY = getattr(secrets, 'SECRET_KEY', SECRET_KEY)
 DATABASES = getattr(secrets, 'DATABASES', DATABASES)
+HOME = getattr(secrets, 'HOME', os.environ['HOME']).rstrip('/')
+
+
+def expand_home(path):
+    return '{}/{}'.format(HOME, path)
+
 
 DEBUG = False
 ALLOWED_HOSTS = ['*']
-STATIC_ROOT = os.path.expanduser('~/Static')
-MEDIA_ROOT = os.path.expanduser('~/Media')
+STATIC_ROOT = expand_home('Static')
+MEDIA_ROOT = expand_home('~/Media')
 
 
 def logging(name):
@@ -19,14 +25,14 @@ def logging(name):
                 'class': 'logging.handlers.RotatingFileHandler',
                 'maxBytes': 1024 * 1024 * 20,  # 20MB
                 'backupCount': 3,
-                'filename': os.path.expanduser('~/Log/{}.err'.format(name)),
+                'filename': expand_home('Log/{}.err'.format(name)),
             },
             'file-debug': {
                 'level': 'DEBUG',
                 'class': 'logging.handlers.RotatingFileHandler',
                 'maxBytes': 1024 * 1024 * 20,  # 20MB
                 'backupCount': 3,
-                'filename': os.path.expanduser('~/Log/{}.log'.format(name)),
+                'filename': expand_home('Log/{}.log'.format(name)),
             },
         },
         'loggers': {
