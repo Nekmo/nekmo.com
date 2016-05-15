@@ -12,7 +12,7 @@ def expand_home(path):
 DEBUG = False
 ALLOWED_HOSTS = ['*']
 STATIC_ROOT = expand_home('Static')
-MEDIA_ROOT = expand_home('~/Media')
+MEDIA_ROOT = expand_home('Media')
 
 
 def logging(name):
