@@ -112,6 +112,7 @@ def deploy(ignore_nondirty=False):
             run('git clone --recursive {} .'.format(GIT_PROJECT_URL))
         else:
             run('git pull')
+            run('git submodule foreach git pull origin master')
         _backup_db()
         run('pip install -r "{}"'.format(REQUIREMENTS_FILE))
         _collecstatic()

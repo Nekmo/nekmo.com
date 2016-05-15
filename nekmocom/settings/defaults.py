@@ -330,8 +330,8 @@ CMS_STYLE_NAMES = (
 )
 
 
-SPAM_PROTECTION = {'default': {'BACKEND': 'djangocms_comments.spam.Akismet', 'TOKEN': secrets.AKISMET_API_KEY,
-                               'IS_TEST': True}}
+SPAM_PROTECTION = {'default': {'BACKEND': 'djangocms_comments.spam.Akismet',
+                               'TOKEN': getattr(secrets, 'AKISMET_API_KEY', ''), 'IS_TEST': True}}
 
 BOOTSTRAP3_THEME = 'nekmocom'
 BOOTSTRAP3_COLS = 24
