@@ -244,6 +244,7 @@ CMS_TEMPLATES = (
     ('cms_bs3_theme/feature.html', 'BS3 Feature'),
     ('cms_bs3_theme/landscape.html', 'BS3 Landscape'),
     ('nekmocom/home.html', 'BS3 Home'),
+    ('sidebar_right.html', 'NekTheme Sidebar right'),
 )
 
 CMS_PERMISSION = True

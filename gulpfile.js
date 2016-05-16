@@ -43,8 +43,14 @@ gulp.task('minify-css', ['devicon-sass-patch', 'sass'], function() {
         .pipe(gulp.dest('dist/css/'));
 });
 
+// Image Assets
+gulp.task('copy-images', function(){
+    return gulp.src(['src/img/*'])
+        .pipe(gulp.dest('dist/img'))
+});
+
 
 gulp.task('default', function() {
     // place code for your default task here
-    gulp.start('minify-css', 'copy-fonts');
+    gulp.start('minify-css', 'copy-fonts', 'copy-images');
 });
