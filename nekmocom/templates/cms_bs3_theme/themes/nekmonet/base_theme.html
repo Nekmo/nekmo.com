@@ -1,6 +1,23 @@
 {% extends "nekmocom/base.html" %}
 {% load static i18n cms_tags %}
 
+{% block header %}
+    <div id="header">
+        {% include bs3_conf.BOOTSTRAP3_MENU_TEMPLATE %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="name-slogan">
+                        <h1>Nekmo Network</h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block bs3_theme_css %}
     {% if bs3_conf.BOOTSTRAP3_FORCE_SRC %}
         <link rel="stylesheet" href="{% static 'nekmocom/src/css/nekmonet.css' %}">
