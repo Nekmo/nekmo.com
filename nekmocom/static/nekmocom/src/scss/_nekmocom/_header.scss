@@ -1,16 +1,18 @@
+/* Common */
 #header {
     background-color: $header-background-color;
-    min-height: 300px;
-    position: relative;
 
     > .container {
         position: relative;
-        height: 300px;
     }
 
     #headline {
         position: absolute;
-        bottom: 30px;
+
+        #logo {
+            background: url("../img/logo.svg");
+            display: inline-block;
+        }
 
         #name-slogan {
             display: inline-block;
@@ -19,39 +21,9 @@
 
             h1 {
                 color: white;
-                font-size: 70px;
                 margin-top: 10px;
                 font-weight: 400;
             }
-
-            p {
-                color: #c5c5c5;
-                font-family: $font-family-monospace;
-                font-weight: 600;
-
-                .function {
-                    color: #4e898b;
-                }
-
-                .string {
-                    color: #bcfffd;
-                }
-            }
-
-            .result {
-                font-family: Monospace, monospace;
-                color: lavenderblush;
-                font-weight: 400;
-            }
-        }
-
-        #logo {
-            background: url("../img/logo.svg");
-            background-size: 160px;
-            width: 160px;
-            height: 160px;
-            display: inline-block;
-            margin-right: 20px;
         }
     }
 
@@ -76,6 +48,85 @@
 
         .mdi::before {
             visibility: visible;
+        }
+    }
+}
+
+/* No home (min ver.) */
+body:not(.tpl-home) #header {
+    min-height: 150px;
+    position: relative;
+
+    > .container {
+        height: 150px;
+    }
+
+    #headline {
+        bottom: 30px;
+
+        #logo {
+            background-size: 80px;
+            width: 80px;
+            height: 80px;
+            margin-left: 20px;
+        }
+
+        #name-slogan {
+            h1 {
+                font-size: 60px;
+            }
+
+        }
+    }
+}
+
+/* Home version */
+.tpl-home {
+    #header {
+        min-height: 300px;
+
+        > .container {
+            position: relative;
+            height: 300px;
+        }
+
+        #name-slogan {
+
+            p {
+                color: #c5c5c5;
+                font-family: $font-family-monospace;
+                font-weight: 600;
+
+                .function {
+                    color: #4e898b;
+                }
+
+                .string {
+                    color: #bcfffd;
+                }
+            }
+
+            .result {
+                font-family: Monospace, monospace;
+                color: lavenderblush;
+                font-weight: 400;
+            }
+        }
+
+        #headline {
+            bottom: 30px;
+
+            #logo {
+                background-size: 160px;
+                width: 160px;
+                height: 160px;
+            }
+
+            #name-slogan {
+                h1 {
+                    font-size: 70px;
+                }
+            }
         }
     }
 }

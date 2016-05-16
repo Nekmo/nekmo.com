@@ -1,57 +1,6 @@
 {% extends "nekmocom/base.html" %}
 {% load static i18n cms_tags %}
 
-{% block header %}
-    <div id="header">
-        {% include bs3_conf.BOOTSTRAP3_MENU_TEMPLATE %}
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="name-slogan">
-                        <h1>Nekmo Network</h1>
-                        <h2>Servicios disponibles en la nube</h2>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="devices-wrapper pull-right">
-                        <div class="pc-screen pc-bg"></div>
-                        <div class="tablet-screen tablet-bg"></div>
-                        <div class="mobile-screen mobile-bg"></div>
-                        <div class="pc-screen pc-loading loading">
-                            <div class="progress">
-                              <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar">
-                                <span class="sr-only">40% Complete (success)</span>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="tablet-screen tablet-loading loading">
-                            <span class="dot-1"></span>
-                            <span class="dot-2"></span>
-                            <span class="dot-3"></span>
-                        </div>
-                        <div class="mobile-screen mobile-loading loading">
-                            <span class="mdi mdi-reload"></span>
-                        </div>
-                        <div class="all-screens starts-animation"></div>
-                        <div class="all-screens white-screen"></div>
-                        <div class="logo pc-screen">
-                            <div><div class="title">Nekmo Network</div>
-                            <div class="nekmi"></div></div>
-                        </div>
-                        <div class="logo tablet-screen">
-                            <div class="nekmi"></div>
-                        </div>
-                        <div class="logo mobile-screen">
-                            <div class="nekmi"></div>
-                        </div>
-                        <div class="devices"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block bs3_theme_css %}
     {% if bs3_conf.BOOTSTRAP3_FORCE_SRC %}
         <link rel="stylesheet" href="{% static 'nekmocom/src/css/nekmonet.css' %}">

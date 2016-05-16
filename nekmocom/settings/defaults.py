@@ -118,7 +118,7 @@ STATICFILES_FINDERS = (
 MIDDLEWARE_CLASSES = (
     'cms.middleware.utils.ApphookReloadMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    # 'django.contrib.sites.middleware.CurrentSiteMiddleware',
+    'django.contrib.sites.middleware.CurrentSiteMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -243,6 +243,7 @@ CMS_TEMPLATES = (
     ('cms_bs3_theme/sidebar_left.html', 'BS3 Sidebar Left'),
     ('cms_bs3_theme/feature.html', 'BS3 Feature'),
     ('cms_bs3_theme/landscape.html', 'BS3 Landscape'),
+    ('nekmocom/home.html', 'BS3 Home'),
 )
 
 CMS_PERMISSION = True

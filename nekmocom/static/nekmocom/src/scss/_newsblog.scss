@@ -111,7 +111,14 @@
     // general content
     article {
         h2 {
+            margin: $line-height-computed * 2 0 $line-height-computed / 2;
+        }
+
+        // Title
+        > h2:first-of-type {
             margin: $line-height-computed / 2 0 $line-height-computed;
+            font-size: 38px;
+            color: $brand-primary;
         }
         .lead {
             font-size: 140%;
