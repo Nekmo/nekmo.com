@@ -64,6 +64,7 @@ body:not(.tpl-home) #header {
     #headline {
         bottom: 30px;
 
+
         #logo {
             background-size: 80px;
             width: 80px;
@@ -84,6 +85,7 @@ body:not(.tpl-home) #header {
 .tpl-home {
     #header {
         min-height: 300px;
+
 
         > .container {
             position: relative;
@@ -128,5 +130,11 @@ body:not(.tpl-home) #header {
                 }
             }
         }
+    }
+}
+
+body:not(.tpl-home) {
+    [role=navigation] {
+        margin-bottom: 20px;
     }
 }
