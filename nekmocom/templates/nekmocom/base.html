@@ -1,15 +1,15 @@
 {% extends "cms_bs3_theme/base.html" %}
-{% load static i18n cms_tags %}
-
+{% load static i18n cms_tags menu_tags %}
+{% get_language_info for LANGUAGE_CODE as lang %}
 
 {% block footer %}
     <div class="footer">
         <div class="container">
             <div class="col-md-12">
-                <h3>Nekmo Software 2016 <small>Todos los derechos reservados.</small></h3>
-                Los errores y sugerencias de los proyectos de esta web deben ser notificados en su respectiva página
-                de reportes. Las dudas no se responderán por email. Para informar de vulnerabilidades de seguridad,
-                escriba a <a href="mailto:security@nekmo.com">security@nekmo.com</a>.
+                <div><h3>Nekmo Software 2016 <small>Todos los derechos reservados.</small></h3>
+                El software que que se presenta en esta web no tiene garantía. Para informar de vulnerabilidades de
+                    seguridad, escriba a <a href="mailto:security@nekmo.com">security@nekmo.com</a>.</div>
+                <div>{% trans "Language" %}: {% language_chooser "nekmocom/includes/menu/langnav.html" "native" %}</div>
             </div>
             <div class="col-md-12">
                 <p class="creator">Desarrollado con <span class="mdi mdi-heart"></span>
