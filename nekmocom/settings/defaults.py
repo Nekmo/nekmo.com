@@ -273,8 +273,8 @@ META_USE_SITES = True
 
 PARLER_LANGUAGES = {
     1: (
-        {'code': 'en'},
         {'code': 'es'},
+        {'code': 'en'},
     ),
     'default': {
         'fallbacks': ['es', 'en'],

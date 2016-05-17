@@ -8,7 +8,7 @@ $header-background-color: $blue-grey-900;
 
 
 $navbar-inverse-color:                      lighten($gray-light, 15%) !default;
-$navbar-inverse-bg:                         #f28858;
+$navbar-inverse-bg: #f28858;
 $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
 
 // Inverted navbar links
@@ -30,6 +30,8 @@ $navbar-inverse-toggle-hover-bg:            #333 !default;
 $navbar-inverse-toggle-icon-bar-bg:         #fff !default;
 $navbar-inverse-toggle-border-color:        #333 !default;
 
+$dropdown-link-hover-bg: $navbar-inverse-link-active-bg;
+$dropdown-link-hover-color: $navbar-inverse-link-active-color;
 
 /* Propio */
 // custom debe encontrarse antes que boostrap para poder establecer variables
