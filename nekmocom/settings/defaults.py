@@ -145,6 +145,7 @@ INSTALLED_APPS = (
     'menus',
     'sekizai',
     'treebeard',
+    'meta',
 
     'ckeditor_filebrowser_filer',
 
