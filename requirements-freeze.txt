@@ -82,3 +82,4 @@ user-agents==1.0.1
 YURL==0.13
 psycopg2==2.6.1
 djangocms-page-meta==0.5.11
+django-htmlmin==0.9.1
