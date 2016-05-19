@@ -15,6 +15,14 @@ STATIC_ROOT = expand_home('Static')
 MEDIA_ROOT = expand_home('Media')
 
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
+
+
 def logging(name):
     return {
         'version': 1,
