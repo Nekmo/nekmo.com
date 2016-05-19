@@ -191,6 +191,8 @@ INSTALLED_APPS = (
 
     'djangocms_comments',
 
+    'djangocms_page_meta',
+
     # 'nektheme',
 )
 
@@ -339,3 +341,7 @@ BOOTSTRAP3_THEME = 'nekmocom'
 BOOTSTRAP3_COLS = 24
 BOOTSTRAP3_SIDEBAR_COLS = 6
 BOOTSTRAP3_MENU_TEMPLATE = 'cms_bs3_theme/menus/fluid-static-top-default.html'
+
+META_USE_GOOGLEPLUS_PROPERTIES = True
+META_USE_TWITTER_PROPERTIES = True
+META_USE_OG_PROPERTIES= True

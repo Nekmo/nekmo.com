@@ -4,9 +4,11 @@
 {% block title %}{{ article.title }} - {{ block.super }}{% endblock %}
 {% block breadcrumb %}{% endblock %}
 
-{% block meta_description %}{{ article.meta_description }}{% endblock meta_description %}
-{% block meta_keywords %}{{ article.meta_keywords }}{% endblock meta_keywords %}
-
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="{{ article.meta_description }}">
+    <meta name="keywords" content="{{ article.meta_keywords }}">
+{% endblock %}
 
 {% block newsblog_content %}
     <div class="aldryn-newsblog-detail">
