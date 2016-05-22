@@ -150,7 +150,6 @@ INSTALLED_APPS = (
     'menus',
     'sekizai',
     'treebeard',
-    'meta',
 
     'ckeditor_filebrowser_filer',
 
@@ -196,7 +195,6 @@ INSTALLED_APPS = (
 
     'djangocms_comments',
 
-    'djangocms_page_meta',
 
     # 'nektheme',
 )
