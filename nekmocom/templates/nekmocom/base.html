@@ -1,6 +1,15 @@
 {% extends "cms_bs3_theme/base.html" %}
-{% load static i18n cms_tags menu_tags %}
+{% load static i18n cms_tags menu_tags page_meta_tags meta %}
 {% get_language_info for LANGUAGE_CODE as lang %}
+
+{% block html_tag %} {% autoescape off %}{% googleplus_html_scope meta.gplus_type %}{% endautoescape %}{% endblock %}
+
+{% block meta_tags %}
+    {% page_meta request.current_page as meta %}
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    {% include 'djangocms_page_meta/meta.html' with meta=meta %}
+
+{% endblock %}
 
 {% block footer %}
     <div class="footer">
