@@ -3,3 +3,4 @@ from .defaults import *
 BOOTSTRAP3_FORCE_SRC = False
 
 # HTML_MINIFY = True
+# from ._debug_toolbar import *

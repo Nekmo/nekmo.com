@@ -24,6 +24,9 @@ CACHES = {
 
 
 def logging(name):
+    if not os.path.lexists(expand_home('Log')):
+        print('Logging is not available for {}!'.format(name))
+        return
     return {
         'version': 1,
         'disable_existing_loggers': False,

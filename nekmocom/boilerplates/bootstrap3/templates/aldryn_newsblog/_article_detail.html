@@ -6,8 +6,9 @@
 
 {% block meta_tags %}
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="{{ article.meta_description }}">
-    <meta name="keywords" content="{{ article.meta_keywords }}">
+{#    <meta name="description" content="{{ article.meta_description }}">#}
+{#    <meta name="keywords" content="{{ article.meta_keywords }}">#}
+    {% include 'aldryn_newsblog/includes/meta.html' with meta=meta %}
 {% endblock %}
 
 {% block newsblog_content %}
