@@ -40,4 +40,7 @@ if 'debug_toolbar' in settings.INSTALLED_APPS:
         url(r'^__debug__/', include(debug_toolbar.urls)),
     )
 
+if 'silk' in settings.INSTALLED_APPS:
+    urlpatterns += patterns('', url(r'^silk/', include('silk.urls', namespace='silk')))
+
 from . import patch
