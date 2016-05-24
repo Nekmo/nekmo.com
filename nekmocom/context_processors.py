@@ -8,5 +8,6 @@ def common(request):
     # except:
     #     theme = 'default'
     return {
-        'nekmocom_static_dir': 'nekmocom/{}/'.format('src' if settings.BOOTSTRAP3_FORCE_SRC else 'dist')
+        'nekmocom_static_dir': 'nekmocom/{}/'.format('src' if getattr(settings, 'BOOTSTRAP3_FORCE_SRC',
+                                                                      False) else 'dist')
     }
