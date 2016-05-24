@@ -8,7 +8,17 @@
     {% page_meta request.current_page as meta %}
     <meta name="viewport" content="width=device-width,initial-scale=1">
     {% include 'djangocms_page_meta/meta.html' with meta=meta %}
+{% endblock %}
 
+{% block extra_head %}
+    <link rel="icon" type="image/png" href="{% static nekmocom_static_dir|add:'/img/favicon/nekmocom-16x16.png' %}"
+    sizes="16x16">
+    <link rel="icon" type="image/png" href="{% static nekmocom_static_dir|add:'/img/favicon/nekmocom-96x96.png' %}"
+          sizes="96x96">
+    <link rel="icon" type="image/png" href="{% static nekmocom_static_dir|add:'/img/favicon/nekmocom-192x192.png' %}"
+          sizes="192x192">
+    <link rel="icon" type="image/png" href="{% static nekmocom_static_dir|add:'/img/favicon/nekmocom-32x32.png' %}"
+          sizes="32x32">
 {% endblock %}
 
 {% block footer %}

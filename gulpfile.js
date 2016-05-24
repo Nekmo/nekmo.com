@@ -45,7 +45,7 @@ gulp.task('minify-css', ['devicon-sass-patch', 'sass'], function() {
 
 // Image Assets
 gulp.task('copy-images', function(){
-    return gulp.src(['src/img/*'])
+    return gulp.src(['src/img/**/*'])
         .pipe(gulp.dest('dist/img'))
 });
 
