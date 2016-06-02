@@ -138,3 +138,19 @@ body:not(.tpl-home) {
         margin-bottom: 20px;
     }
 }
+
+/* Mobile */
+@media only screen and (max-device-width: 480px) {
+    body:not(.tpl-home) #header #headline {
+        #name-slogan h1 {
+            font-size: 45px;
+        }
+
+        #logo {
+            background-size: 70px;
+            width: 70px;
+            height: 70px;
+            margin-left: 5px;
+        }
+    }
+}
