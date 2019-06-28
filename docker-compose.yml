@@ -1,0 +1,62 @@
+version: '2.1'
+services:
+
+  nginx:
+    restart: on-failure
+    image: "nginx"
+    volumes:
+      - ./conf/nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./conf/nginx/ssl:/etc/nginx/ssl:ro
+      - ./data/nginx/log/:/var/log/nginx/
+    volumes_from:
+      - gunicorn_nekmocom
+    ports:
+      - "80"
+      - "443"
+    command: [ 'nginx-debug', '-g', 'daemon off;']
+
+  gunicorn_nekmocom:
+    restart: on-failure
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/code
+      - ./data/gunicorn/logs:/var/log/gunicorn/
+      - ./data/gunicorn/media:/media
+      - ./data/gunicorn/uploads:/uploads
+      - ./data/gunicorn/static:/static
+    env_file:
+      - .env
+    environment:
+      DJANGO_SETTINGS_MODULE: nekmocom.settings.production_nekmocom
+
+  gunicorn_nekmonet:
+    restart: on-failure
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes_from:
+      - gunicorn_nekmocom
+    env_file:
+      - .env
+    environment:
+      DJANGO_SETTINGS_MODULE: nekmocom.settings.production_nekmonet
+
+    # Sólo disponible en XFS montado con la opción pquota
+    # storage_opt:
+    #   size: '10G'
+
+  postgres:
+    restart: on-failure
+    image: postgres
+    volumes:
+      - ./data/postgres/data:/var/lib/postgresql/data
+    env_file:
+      - .env
+
+  memcached:
+    restart: on-failure
+    image: memcached
+    env_file:
+      - .env

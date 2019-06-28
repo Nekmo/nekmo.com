@@ -14,12 +14,12 @@ Django==1.9.6
 django-appconf==1.0.2
 django-appdata==0.1.5
 django-bootstrap3==7.0.1
--e git+git@github.com:nephila/django-ckeditor-filebrowser-filer.git@582f68acb99e68d00f4fce9db3a264ff0fe050b5#egg=django_ckeditor_filebrowser_filer
+-e git+https://github.com/nephila/django-ckeditor-filebrowser-filer.git@582f68acb99e68d00f4fce9db3a264ff0fe050b5#egg=django_ckeditor_filebrowser_filer
 django-classy-tags==0.7.2
 django-cms==3.2.5
 django-crispy-forms==1.6.0
 django-durationfield==0.5.2
--e git+https://github.com/blueyed/djangocms-snippet.git@dc754d59050d24503fdbf31e6fcd5ed099675a1f#egg=djangocms_snippet-master
+-e git+https://github.com/nekmocom/djangocms-snippet.git@dc754d59050d24503fdbf31e6fcd5ed099675a1f#egg=djangocms_snippet-master
 -e git+https://github.com/divio/django-filer.git@d6cbca4abcb88ff8af13f6af158e2855fda5f59a#egg=django_filer
 django-formtools==1.0
 django-haystack==2.4.1
@@ -66,7 +66,7 @@ phonenumberslite==7.3.2
 Pillow==3.2.0
 pycrypto==2.6.1
 pykismet3==0.1.1
-python-akismet==0.2.3
+python-akismet==0.4.1
 python-dateutil==2.5.3
 python-slugify==1.2.0
 pytz==2016.4
