@@ -14,4 +14,4 @@ RUN mkdir -p /var/log/gunicorn
 
 ENV PYTHONPATH "/code:${PYTHONPATH}"
 WORKDIR /code
-ENTRYPOINT [ "/usr/local/bin/gunicorn", "-w", "18", "-b", "0.0.0.0:8000", "nekmocom.wsgi:application" ]
+ENTRYPOINT ["./entrypoint.py", "-w", "4", "-b", "0.0.0.0:8000", "nekmocom.wsgi:application"]

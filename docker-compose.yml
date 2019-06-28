@@ -42,6 +42,7 @@ services:
       - .env
     environment:
       DJANGO_SETTINGS_MODULE: nekmocom.settings.production_nekmonet
+      BUILD_DJANGO: 0
 
     # Sólo disponible en XFS montado con la opción pquota
     # storage_opt:
