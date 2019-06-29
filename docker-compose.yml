@@ -1,15 +1,29 @@
 version: '2.1'
 services:
 
-  nginx:
+  nginx_nekmocom:
     restart: on-failure
     image: "nginx"
     volumes:
-      - ./conf/nginx/conf.d:/etc/nginx/conf.d:ro
-      - ./conf/nginx/ssl:/etc/nginx/ssl:ro
-      - ./data/nginx/log/:/var/log/nginx/
+      - ./conf/nginx_nekmocom/conf.d:/etc/nginx/conf.d:ro
+      - ./conf/nginx_nekmocom/ssl:/etc/nginx/ssl:ro
+      - ./data/nginx_nekmocom/log/:/var/log/nginx/
     volumes_from:
       - gunicorn_nekmocom
+    ports:
+      - "80"
+      - "443"
+    command: [ 'nginx-debug', '-g', 'daemon off;']
+
+  nginx_nekmonet:
+    restart: on-failure
+    image: "nginx"
+    volumes:
+      - ./conf/nginx_nekmonet/conf.d:/etc/nginx/conf.d:ro
+      - ./conf/nginx_nekmonet/ssl:/etc/nginx/ssl:ro
+      - ./data/nginx_nekmonet/log/:/var/log/nginx/
+    volumes_from:
+      - gunicorn_nekmonet
     ports:
       - "80"
       - "443"
