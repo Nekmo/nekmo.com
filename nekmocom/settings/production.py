@@ -1,7 +1,6 @@
 from .defaults import *
 
-SECRET_KEY = getattr(secrets, 'SECRET_KEY', SECRET_KEY)
-HOME = getattr(secrets, 'HOME', os.environ.get('HOME', '')).rstrip('/')
+SECRET_KEY = os.getenv('SECRET_KEY', SECRET_KEY)
 
 DATABASES = {
     'default': {

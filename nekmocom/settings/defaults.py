@@ -20,13 +20,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 _ = lambda x: x
 
-try:
-    from ..secrets import settings as secrets
-except ImportError:
-    import warnings
-    warnings.warn("Secrets is not available!")
-    secrets = None
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -340,7 +333,7 @@ CMS_STYLE_NAMES = (
 
 
 SPAM_PROTECTION = {'default': {'BACKEND': 'djangocms_comments.spam.Akismet',
-                               'TOKEN': getattr(secrets, 'AKISMET_API_KEY', ''), 'IS_TEST': True}}
+                               'TOKEN': os.getenv('AKISMET_API_KEY', ''), 'IS_TEST': True}}
 
 BOOTSTRAP3_THEME = 'nekmocom'
 BOOTSTRAP3_COLS = 24
