@@ -78,7 +78,7 @@ Unidecode==0.4.19
 URLObject==2.4.0
 user-agents==1.0.1
 YURL==0.13
-psycopg2==2.6.1
+psycopg2
 djangocms-page-meta==0.5.11
 django-htmlmin==0.9.1
 python-memcached==1.57
