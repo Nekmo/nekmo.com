@@ -1,4 +1,4 @@
-version: '2.1'
+version: '3'
 services:
 
   nginx_nekmocom:
@@ -10,9 +10,14 @@ services:
       - ./data/nginx_nekmocom/log/:/var/log/nginx/
     volumes_from:
       - gunicorn_nekmocom
+    networks:
+      - nginx-proxy
+      - default
     ports:
       - "80"
       - "443"
+    environment:
+      VIRTUAL_HOST: nekmo.com
     command: [ 'nginx-debug', '-g', 'daemon off;']
 
   nginx_nekmonet:
@@ -24,6 +29,11 @@ services:
       - ./data/nginx_nekmonet/log/:/var/log/nginx/
     volumes_from:
       - gunicorn_nekmonet
+    networks:
+      - nginx-proxy
+      - default
+    environment:
+      VIRTUAL_HOST: nekmo.net
     ports:
       - "80"
       - "443"
@@ -75,3 +85,7 @@ services:
     image: memcached
     env_file:
       - .env
+networks:
+  nginx-proxy:
+    external:
+      name: nginx-proxy
