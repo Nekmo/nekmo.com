@@ -1,4 +1,4 @@
-version: '3'
+version: '2.4'
 services:
 
   nginx_nekmocom:
@@ -87,5 +87,5 @@ services:
       - .env
 networks:
   nginx-proxy:
-    external:
-      name: nginx-proxy
+    external: yes
+    name: nginx-proxy
