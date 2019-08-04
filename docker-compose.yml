@@ -74,7 +74,7 @@ services:
 
   postgres:
     restart: on-failure
-    image: postgres
+    image: postgres:9.5
     volumes:
       - ./data/postgres/data:/var/lib/postgresql/data
     env_file:
