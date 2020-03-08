@@ -20,9 +20,9 @@ services:
       - "traefik.enable=true"
       - "traefik.docker.network=web-router"
 
-      - "traefik.http.routers.paste.rule=Host(`nekmo.com`)"
-      - "traefik.http.routers.paste.entrypoints=websecure"
-      - "traefik.http.routers.paste.tls.certresolver=certbot"
+      - "traefik.http.routers.nekmocom.rule=Host(`nekmo.com`)"
+      - "traefik.http.routers.nekmocom.entrypoints=websecure"
+      - "traefik.http.routers.nekmocom.tls.certresolver=certbot"
     command: [ 'nginx-debug', '-g', 'daemon off;']
 
   nginx_nekmonet:
@@ -41,9 +41,9 @@ services:
       - "traefik.enable=true"
       - "traefik.docker.network=web-router"
 
-      - "traefik.http.routers.paste.rule=Host(`nekmo.net`)"
-      - "traefik.http.routers.paste.entrypoints=websecure"
-      - "traefik.http.routers.paste.tls.certresolver=certbot"
+      - "traefik.http.routers.nekmonet.rule=Host(`nekmo.net`)"
+      - "traefik.http.routers.nekmonet.entrypoints=websecure"
+      - "traefik.http.routers.nekmonet.tls.certresolver=certbot"
     ports:
       - "80"
       - "443"
