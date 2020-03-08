@@ -11,14 +11,18 @@ services:
     volumes_from:
       - gunicorn_nekmocom
     networks:
-      - nginx-proxy
+      - web-router
       - default
     ports:
       - "80"
       - "443"
-    environment:
-      VIRTUAL_HOST: nekmo.com
-      LETSENCRYPT_HOST: nekmo.com
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=web-router"
+
+      - "traefik.http.routers.paste.rule=Host(`nekmo.com`)"
+      - "traefik.http.routers.paste.entrypoints=websecure"
+      - "traefik.http.routers.paste.tls.certresolver=certbot"
     command: [ 'nginx-debug', '-g', 'daemon off;']
 
   nginx_nekmonet:
@@ -31,11 +35,15 @@ services:
     volumes_from:
       - gunicorn_nekmonet
     networks:
-      - nginx-proxy
+      - web-router
       - default
-    environment:
-      VIRTUAL_HOST: nekmo.net
-      LETSENCRYPT_HOST: nekmo.net
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=web-router"
+
+      - "traefik.http.routers.paste.rule=Host(`nekmo.net`)"
+      - "traefik.http.routers.paste.entrypoints=websecure"
+      - "traefik.http.routers.paste.tls.certresolver=certbot"
     ports:
       - "80"
       - "443"
@@ -88,6 +96,6 @@ services:
     env_file:
       - .env
 networks:
-  nginx-proxy:
+  web-router:
     external: yes
-    name: nginx-proxy
+    name: web-router
