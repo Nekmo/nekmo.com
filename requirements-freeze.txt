@@ -10,7 +10,7 @@ aldryn-translation-tools==0.2.1
 Babel==2.3.4
 backport-collections==0.1
 -e git+https://github.com/divio/cmsplugin-filer.git@230da930486b0bf8e8d0529dc241031d6224655a#egg=cmsplugin_filer
-Django==1.9.6
+Django==2.2.24
 django-appconf==1.0.2
 django-appdata==0.1.5
 django-bootstrap3==7.0.1
