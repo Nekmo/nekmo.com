@@ -7,7 +7,7 @@ aldryn-people==1.2.0
 aldryn-reversion==1.0.8
 aldryn-search==0.2.11
 aldryn-translation-tools==0.2.1
-Babel==2.3.4
+Babel==2.9.1
 backport-collections==0.1
 -e git+https://github.com/divio/cmsplugin-filer.git@230da930486b0bf8e8d0529dc241031d6224655a#egg=cmsplugin_filer
 Django==1.9.6
