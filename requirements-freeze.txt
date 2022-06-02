@@ -57,7 +57,7 @@ djangocms-video==1.0.0
 easy-thumbnails==2.3
 ecdsa==0.13
 Fabric3==1.11.1.post1
-html5lib==0.9999999
+html5lib==0.99999999
 lxml==3.6.0
 paramiko==1.17.0
 phonenumbers==7.3.2
