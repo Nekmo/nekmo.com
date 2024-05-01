@@ -1,5 +1,5 @@
 -r requirements-freeze.txt
-gunicorn
+gunicorn==20.0.4
 -e git+https://github.com/Nekmo/djangocms-bs3-theme.git@master#egg=djangocms-bs3-theme
 -e git+https://github.com/Nekmo/djangocms-comments.git@master#egg=djangocms-comments
 -e git+https://github.com/Nekmo/aldryn-newsblog@master#egg=aldryn-newsblog

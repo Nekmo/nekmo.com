@@ -9,7 +9,7 @@ WORKDIR /tmp
 COPY requirements.txt .
 COPY requirements-freeze.txt .
 RUN echo "Installing requirements"
-RUN pip install -r requirements.txt
+RUN pip pip install pip==19.1.1 && install -r requirements.txt
 RUN mkdir -p /var/log/gunicorn
 
 ENV PYTHONPATH "/code:${PYTHONPATH}"
